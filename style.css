@@ -1,0 +1,125 @@
+html,
+body {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #0d1117;
+  margin: 0;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.container #notesinput {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.container #notesinput #note {
+  width: 100%;
+  margin-top: 10px;
+  padding: 10px;
+  background-color: #0d1117;
+  color: #c9d1d9;
+  border: 2px solid #30363d;
+  border-radius: 9px;
+  box-sizing: border-box;
+}
+
+.container #notesinput #sendNote {
+  background-color: #238636;
+  color: #fff;
+  cursor: pointer;
+  width: 100%;
+  max-width: 120px;
+  height: 40px;
+  border-radius: 20px;
+  border: none;
+}
+
+.container #notes #listNotes {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.container #notes li {
+  background-color: #21262d;
+  margin: 5px 0;
+  padding: 10px;
+  border-radius: 4px;
+  color: #c9d1d9;
+  border: 1px solid #30363d;
+  transition: background-color 0.3s;
+  position: relative;
+  cursor: pointer;
+  word-wrap: break-word;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.container #notes li:hover {
+  background-color: #0059ff;
+}
+
+/* Responsive Design */
+
+/* For tablets and small devices (portrait) */
+@media (max-width: 768px) {
+  .container {
+    width: 95%;
+    padding: 10px;
+  }
+
+  .container #notesinput {
+    flex-direction: column;
+  }
+
+  .container #notesinput #sendNote {
+    max-width: 100%;
+  }
+
+  .container #notes li {
+    font-size: 14px;
+    padding: 8px;
+  }
+}
+
+/* For mobile phones */
+@media (max-width: 480px) {
+  .container {
+    width: 100%;
+    height: auto;
+    padding: 5px;
+  }
+
+  .container #notesinput {
+    flex-direction: column;
+  }
+
+  .container #notesinput #note {
+    padding: 8px;
+  }
+
+  .container #notesinput #sendNote {
+    width: 100%;
+    max-width: none;
+  }
+
+  .container #notes li {
+    font-size: 12px;
+    padding: 6px;
+  }
+}
